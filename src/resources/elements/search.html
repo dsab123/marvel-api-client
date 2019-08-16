@@ -1,6 +1,10 @@
 <template>
-    <input type="search" value.bind="content" />
-    <button type="button" click.delegate="performSearch()">
-        Search
-    </button>
+    <require from="../../css/search.css"></require>
+
+    <div class="search">
+        <input type="search" value.bind="content" />
+        <button type="button" click.delegate="performSearch()">
+            Search
+        </button>
+    </div>
 </template>

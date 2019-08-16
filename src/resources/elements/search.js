@@ -5,7 +5,7 @@ import {Hero} from '../../models/hero';
 
 @inject(Api)
 export class Search {
-    @bindable content = 'hulk';
+    @bindable content;
     @bindable currentHero = null;
 
     constructor(api) {
@@ -28,5 +28,10 @@ export class Search {
         } catch(err) {
             console.log(err);
         }
+    }
+
+    // perform a search with default value of 'hulk'
+    attached() {
+        this.performSearch();
     }
 }

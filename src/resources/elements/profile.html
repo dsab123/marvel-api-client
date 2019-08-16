@@ -1,17 +1,23 @@
 <template>
     <require from="resources/elements/search"></require>
-    <search content.two-way="userName"
-      current-hero.two-way="hero"
-    ></search>
+    <require from="../../css/profile.css"></require>
+
+    <search 
+      content.two-way="userName"
+      current-hero.two-way="hero">
+    </search>
   
-  <h2>Character Profile: ${userName}</h2>
-  
-  <div show.bind="hero">
-    <h3>Name: ${hero.name}</h3>
-    <h4>Description: ${hero.description}</h4>
-    <img height="500" width="500" src="${hero.thumbnail}">
-  </div>
-  <div show.bind="!hero">
-    <h4>No hero selected, dum-dum!</h4>
+    <div class="profile">
+      <p>try: "spider-man", "hulk", "groot", "iron man", etc</p>
+      <h2>Character Profile: ${userName}</h2>
+    
+      <div show.bind="hero">
+        <h3>Name: ${hero.name}</h3>
+        <h4>Description: ${hero.description}</h4>
+        <img height="500" width="500" src="${hero.thumbnail}">
+      </div>
+      <div show.bind="!hero">
+        <h4>Looks like that hero doesn't exist! (Check your spelling and hyphens)</h4>
+      </div>
   </div>
 </template>
