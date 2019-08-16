@@ -1,0 +1,17 @@
+<template>
+    <require from="resources/elements/search"></require>
+    <search content.two-way="userName"
+      current-hero.two-way="hero"
+    ></search>
+  
+  <h2>Character Profile: ${userName}</h2>
+  
+  <div show.bind="hero">
+    <h3>Name: ${hero.name}</h3>
+    <h4>Description: ${hero.description}</h4>
+    <img height="500" width="500" src="${hero.thumbnail}">
+  </div>
+  <div show.bind="!hero">
+    <h4>No hero selected, dum-dum!</h4>
+  </div>
+</template>

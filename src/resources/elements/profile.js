@@ -1,9 +1,6 @@
 import {bindable} from 'aurelia-framework';
 
-export class App {
+export class Profile {
   @bindable userName;
-
-  constructor() {
-    this.heroesList = [];
-  }
+  @bindable hero;
 }
