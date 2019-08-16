@@ -1,5 +1,5 @@
 {
-  "name": "twitter-client",
+  "name": "marvel-api-client",
   "type": "project:application",
   "paths": {
     "root": "src",
